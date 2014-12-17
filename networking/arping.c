@@ -13,11 +13,6 @@
 #include <netinet/ether.h>
 #include <netpacket/packet.h>
 
-#include <arpa/inet.h>
-#include <net/if.h>
-#include <netinet/ether.h>
-#include <netpacket/packet.h>
-#include "libbb.h"
 
 /* We don't expect to see 1000+ seconds delay, unsigned is enough */
 #define MONOTONIC_US() ((unsigned)monotonic_us())
@@ -31,7 +26,15 @@ enum {
 	BCAST_ONLY = 32,
 	UNICASTING = 64
 };
-
+enum {
+	DAD = 1,
+	UNSOLICITED = 2,
+	ADVERT = 4,
+	QUIET = 8,
+	QUIT_ON_REPLY = 16,
+	BCAST_ONLY = 32,
+	UNICASTING = 64
+};
 struct globals {
 	struct in_addr src;
 	struct in_addr dst;
