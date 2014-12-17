@@ -13,6 +13,10 @@
 #include <netinet/ether.h>
 #include <netpacket/packet.h>
 
+#include <arpa/inet.h>
+#include <net/if.h>
+#include <netinet/ether.h>
+#include <netpacket/packet.h>
 #include "libbb.h"
 
 /* We don't expect to see 1000+ seconds delay, unsigned is enough */
