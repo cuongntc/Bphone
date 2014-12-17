@@ -13,18 +13,6 @@
  * modified for getopt32 by Arne Bernin <arne [at] alamut.de>
  */
 
-#include "libbb.h"
-#include "inet_common.h"
-
-#include <arpa/inet.h>
-#include <net/if.h>
-#include <net/if_arp.h>
-#include <netinet/ether.h>
-#include <netpacket/packet.h>
-
-#define DEBUG 0
-
-#define DFLT_AF "inet"
 #define DFLT_HW "ether"
 
 enum {
